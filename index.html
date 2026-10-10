@@ -1,5 +1,5 @@
 <!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="img/favicon.png"><title>ถั่วหงหยก · Hong Yok Peanut</title><meta property="og:title" content="ถั่วหงหยก · Hong Yok Peanut"><meta property="og:image" content="img/social-1080.jpg">
+<link rel="icon" href="img/favicon.png?v=2"><title>ถั่วหงหยก · Hong Yok Peanut</title><meta property="og:title" content="ถั่วหงหยก · Hong Yok Peanut"><meta property="og:image" content="img/social-1080.jpg?v=2">
 <style>
 @font-face{font-family:K;src:url(fonts/Kanit-Regular.ttf);font-display:swap}@font-face{font-family:K;font-weight:600;src:url(fonts/Kanit-SemiBold.ttf);font-display:swap}@font-face{font-family:K;font-weight:700;src:url(fonts/Kanit-Bold.ttf);font-display:swap}
 *{box-sizing:border-box}body{margin:0;font-family:K,sans-serif;background:#fff4f0;color:#5a2d1c;padding-bottom:90px}
@@ -22,7 +22,7 @@ h1{margin:6px 0 0;font-size:34px}.en{color:#8e2d45;letter-spacing:3px;font-weigh
 pre{white-space:pre-wrap;font:15px K;background:#fff6f3;padding:10px;border-radius:12px}.qr{width:150px;height:150px;margin:8px auto;border:3px dashed #c2405a;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:12px}
 footer{text-align:center;font-size:13px;color:#8a6a4a;padding:20px}
 </style></head><body>
-<header><div class="w"><img src="img/logo.png" alt="" width="96" height="96" style="display:block;margin:auto"><h1>ถั่วหงหยก</h1><div class="en">HONG YOK PEANUT</div><p class="tag">ถั่วอร่อย เคี้ยวเพลิน หยิบได้ทั้งวัน</p><img class="hero" src="img/hero.jpg" alt="ถั่วหงหยก 3 ขนาด" width="1200" height="900"></div></header>
+<header><div class="w"><img src="img/logo.png?v=2" alt="" width="96" height="96" style="display:block;margin:auto"><h1>ถั่วหงหยก</h1><div class="en">HONG YOK PEANUT</div><p class="tag">ถั่วอร่อย เคี้ยวเพลิน หยิบได้ทั้งวัน</p><img class="hero" src="img/hero.jpg?v=2" alt="ถั่วหงหยก 3 ขนาด" width="1200" height="900"></div></header>
 <main class="w">
 <h2>เลือกขนาดได้เลย 👇</h2><div id="prods"></div>
 <h2>เลือกรสชาติ <span class="note">(ตัวอย่าง)</span></h2><div class="chips" id="flv"></div>
@@ -48,7 +48,7 @@ footer{text-align:center;font-size:13px;color:#8a6a4a;padding:20px}
 </main><footer>© ถั่วหงหยก · Hong Yok Peanut — เว็บตัวอย่าง (Mockup)</footer>
 <div class="bar"><div><span id="cnt">0</span> ถุง · <b>฿<span id="tot">0</span></b></div><a href="#checkout">ไปสั่งซื้อ</a></div>
 <script>
-const P=[{id:'s',n:'ขนาดเล็ก',img:'img/bag-s.jpg',p:75},{id:'m',n:'ขนาดกลาง',img:'img/bag-m.jpg',p:140},{id:'l',n:'ขนาดใหญ่',img:'img/bag-l.jpg',p:250}],q={s:0,m:0,l:0},F=['คั่วเกลือ','อบเนย','สมุนไพร'];let f='คั่วเกลือ';
+const P=[{id:'s',n:'ขนาดเล็ก',img:'img/bag-s.jpg?v=2',p:75},{id:'m',n:'ขนาดกลาง',img:'img/bag-m.jpg?v=2',p:140},{id:'l',n:'ขนาดใหญ่',img:'img/bag-l.jpg?v=2',p:250}],q={s:0,m:0,l:0},F=['คั่วเกลือ','อบเนย','สมุนไพร'];let f='คั่วเกลือ';
 prods.innerHTML=P.map(x=>`<div class="card"><img src="${x.img}" alt="${x.n}" loading="lazy"><div class="i"><b>ถั่วลิสงคั่ว ${x.n}</b><div class="note">น้ำหนัก ___ กรัม</div><div class="pr">฿${x.p}</div><div class="qty"><button onclick="ch('${x.id}',-1)">−</button><span id="q${x.id}">0</span><button onclick="ch('${x.id}',1)">+</button></div></div></div>`).join('');
 flv.innerHTML=F.map(x=>`<button class="chip${x==f?' on':''}" onclick="f='${x}';[...flv.children].forEach(c=>c.classList.toggle('on',c.textContent==f))">${x}</button>`).join('');
 function ch(i,d){q[i]=Math.max(0,q[i]+d);document.getElementById('q'+i).textContent=q[i];let c=0,t=0;P.forEach(x=>{c+=q[x.id];t+=q[x.id]*x.p});cnt.textContent=c;tot.textContent=t}
