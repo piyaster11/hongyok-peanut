@@ -1,0 +1,62 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ถั่วฮงยก · Hong Yok Peanut</title><meta property="og:title" content="ถั่วฮงยก · Hong Yok Peanut"><meta property="og:image" content="img/social-1080.jpg">
+<style>
+@font-face{font-family:K;src:url(fonts/Kanit-Regular.ttf);font-display:swap}@font-face{font-family:K;font-weight:600;src:url(fonts/Kanit-SemiBold.ttf);font-display:swap}@font-face{font-family:K;font-weight:700;src:url(fonts/Kanit-Bold.ttf);font-display:swap}
+*{box-sizing:border-box}body{margin:0;font-family:K,sans-serif;background:#fff6e3;color:#4a250c;padding-bottom:90px}
+.w{max-width:480px;margin:auto;padding:0 16px}header{background:linear-gradient(#ffe6a8,#fff6e3);text-align:center;padding:18px 0 8px}
+h1{margin:6px 0 0;font-size:34px}.en{color:#a3241a;letter-spacing:3px;font-weight:600;font-size:14px}.tag{font-size:19px;margin:6px 0 10px}
+.hero{width:100%;height:auto;border-radius:20px;box-shadow:0 6px 18px #a0702033}h2{font-size:22px;margin:26px 0 10px}
+.card{display:flex;gap:12px;background:#fff;border-radius:18px;padding:12px;margin-bottom:12px;box-shadow:0 3px 10px #b07a2a22;align-items:center}
+.card img{width:96px;height:120px;object-fit:cover;border-radius:12px}.card .i{flex:1}.card b{font-size:18px}.pr{color:#c62828;font-size:22px;font-weight:700}
+.qty{display:flex;align-items:center;gap:8px;margin-top:6px}.qty button{width:44px;height:44px;border-radius:50%;border:0;background:#e9b13d;color:#4a250c;font:700 24px K}.qty span{min-width:26px;text-align:center;font-size:20px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{padding:10px 14px;border-radius:30px;border:2px solid #e9b13d;background:#fff;font:16px K;color:#4a250c}.chip.on{background:#e9b13d}
+.note{font-size:13px;color:#8a6a4a}label{display:block;margin:10px 0 4px;font-weight:600}input,textarea{width:100%;padding:12px;border-radius:12px;border:2px solid #ecd2a0;font:16px K;background:#fff}
+.opt{display:flex;gap:8px}.opt label{flex:1;margin:0;background:#fff;border:2px solid #ecd2a0;border-radius:12px;padding:12px;font-weight:400}.opt input{width:auto}
+.box{background:#fff;border-radius:18px;padding:14px;box-shadow:0 3px 10px #b07a2a22}
+.btn{display:block;width:100%;padding:15px;border:0;border-radius:30px;font:600 18px K;margin-top:10px;text-align:center;text-decoration:none}
+.red{background:#c62828;color:#fff}.line{background:#06c755;color:#fff}.gray{background:#f1dfbb;color:#4a250c}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#4a250c;color:#fff;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;z-index:9}
+.bar a{background:#e9b13d;color:#4a250c;padding:12px 20px;border-radius:30px;text-decoration:none;font-weight:600}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:10px}.why div{background:#fff;border-radius:16px;padding:12px;text-align:center}
+.rv{background:#fff;border-radius:16px;padding:12px;margin-bottom:8px}details{background:#fff;border-radius:14px;padding:12px;margin-bottom:8px}summary{font-weight:600}
+pre{white-space:pre-wrap;font:15px K;background:#fff8ea;padding:10px;border-radius:12px}.qr{width:150px;height:150px;margin:8px auto;border:3px dashed #c62828;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:12px}
+footer{text-align:center;font-size:13px;color:#8a6a4a;padding:20px}
+</style></head><body>
+<header><div class="w"><h1>🥜 ถั่วฮงยก</h1><div class="en">HONG YOK PEANUT</div><p class="tag">ถั่วอร่อย เคี้ยวเพลิน หยิบได้ทั้งวัน</p><img class="hero" src="img/hero.jpg" alt="ถั่วฮงยก 3 ขนาด" width="1200" height="900"></div></header>
+<main class="w">
+<h2>เลือกขนาดได้เลย 👇</h2><div id="prods"></div>
+<h2>เลือกรสชาติ <span class="note">(ตัวอย่าง)</span></h2><div class="chips" id="flv"></div>
+<h2>ข้อมูลการสั่งซื้อ</h2><div class="box" id="checkout">
+<label>ชื่อผู้สั่ง</label><input id="nm" placeholder="เช่น คุณนิด">
+<label>เบอร์โทร</label><input id="ph" type="tel" inputmode="tel" placeholder="08x-xxx-xxxx">
+<label>รับสินค้าแบบไหน</label><div class="opt"><label><input type="radio" name="dl" value="จัดส่ง" checked> 🚚 จัดส่ง</label><label><input type="radio" name="dl" value="รับเองที่ร้าน"> 🏪 รับเอง</label></div>
+<label>ที่อยู่จัดส่ง</label><textarea id="ad" rows="3" placeholder="บ้านเลขที่ ถนน แขวง/ตำบล เขต/อำเภอ จังหวัด รหัสไปรษณีย์"></textarea>
+<label>ชำระเงิน</label><div class="opt"><label><input type="radio" name="pay" value="พร้อมเพย์" checked> 📱 พร้อมเพย์</label><label><input type="radio" name="pay" value="เก็บเงินปลายทาง"> 💵 ปลายทาง</label></div>
+<div id="qrb"><div class="qr">QR พร้อมเพย์<br>(ใส่ภายหลัง)</div><p class="note" style="text-align:center">พร้อมเพย์: 0xx-xxx-xxxx (ตัวอย่าง)</p></div>
+<label>หมายเหตุ</label><input id="nt" placeholder="เช่น ขอไม่เผ็ด / ส่งเป็นของขวัญ">
+<button class="btn red" onclick="order()">สั่งซื้อเลย 🥜</button></div>
+<div id="sum" class="box" style="display:none;margin-top:14px"><h2 style="margin-top:0">สรุปคำสั่งซื้อ ✅</h2><pre id="txt"></pre>
+<a class="btn line" id="lsh" target="_blank">ส่งออเดอร์ทาง LINE</a><a class="btn line" style="background:#04a648" href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank">แอดไลน์ร้าน @YOUR_LINE_ID</a><button class="btn gray" onclick="cp()">📋 คัดลอกข้อความออเดอร์</button>
+<p class="note">ส่งข้อความนี้ให้ร้านทาง LINE แล้วรอร้านยืนยันยอดและค่าส่งนะคะ · สินค้าใน TikTok Shop ใช้รูปและราคาเดียวกันนี้</p></div>
+<h2>ทำไมต้องถั่วฮงยก?</h2><div class="why"><div>🔥<br>คั่วใหม่ทุกวัน</div><div>🏡<br>สูตรทำเองที่บ้าน</div><div>😋<br>หอม กรอบ มัน</div><div>🛍️<br>ถุงซิปล็อก เก็บง่าย</div></div>
+<h2>รีวิวจากลูกค้า <span class="note">(ตัวอย่าง)</span></h2>
+<div class="rv">⭐⭐⭐⭐⭐ “กรอบมาก กินเพลินจนหมดถุง” — คุณเอ</div><div class="rv">⭐⭐⭐⭐⭐ “ถุงทองสวย ซื้อเป็นของฝากได้เลย” — คุณบี</div><div class="rv">⭐⭐⭐⭐⭐ “หอมเกลือกำลังดี ไม่เค็มเกิน” — คุณแนน</div>
+<h2>คำถามที่พบบ่อย <span class="note">(ตัวอย่าง)</span></h2>
+<details><summary>เก็บได้นานแค่ไหน?</summary>ปิดซิปให้สนิท เก็บในที่แห้ง ประมาณ ___ เดือน</details>
+<details><summary>ส่งกี่วันถึง?</summary>ส่งภายใน 1–2 วันทำการ ค่าส่งร้านจะแจ้งอีกครั้ง</details>
+<details><summary>สั่งจำนวนมาก/ของชำร่วยได้ไหม?</summary>ได้เลย ทักไลน์ร้านเพื่อขอราคาพิเศษ</details>
+</main><footer>© ถั่วฮงยก · Hong Yok Peanut — เว็บตัวอย่าง (Mockup)</footer>
+<div class="bar"><div><span id="cnt">0</span> ถุง · <b>฿<span id="tot">0</span></b></div><a href="#checkout">ไปสั่งซื้อ</a></div>
+<script>
+const P=[{id:'s',n:'ขนาดเล็ก',img:'img/bag-s.jpg',p:75},{id:'m',n:'ขนาดกลาง',img:'img/bag-m.jpg',p:140},{id:'l',n:'ขนาดใหญ่',img:'img/bag-l.jpg',p:250}],q={s:0,m:0,l:0},F=['คั่วเกลือ','อบเนย','สมุนไพร'];let f='คั่วเกลือ';
+prods.innerHTML=P.map(x=>`<div class="card"><img src="${x.img}" alt="${x.n}" loading="lazy"><div class="i"><b>ถั่วลิสงคั่ว ${x.n}</b><div class="note">น้ำหนัก ___ กรัม</div><div class="pr">฿${x.p}</div><div class="qty"><button onclick="ch('${x.id}',-1)">−</button><span id="q${x.id}">0</span><button onclick="ch('${x.id}',1)">+</button></div></div></div>`).join('');
+flv.innerHTML=F.map(x=>`<button class="chip${x==f?' on':''}" onclick="f='${x}';[...flv.children].forEach(c=>c.classList.toggle('on',c.textContent==f))">${x}</button>`).join('');
+function ch(i,d){q[i]=Math.max(0,q[i]+d);document.getElementById('q'+i).textContent=q[i];let c=0,t=0;P.forEach(x=>{c+=q[x.id];t+=q[x.id]*x.p});cnt.textContent=c;tot.textContent=t}
+document.querySelectorAll('[name=pay]').forEach(r=>r.onchange=()=>qrb.style.display=r.value=='พร้อมเพย์'&&r.checked?'block':'none');
+function order(){let t=0,l=P.filter(x=>q[x.id]).map(x=>{t+=q[x.id]*x.p;return`• ${x.n} x${q[x.id]} = ฿${q[x.id]*x.p}`});
+if(!l.length){alert('กรุณาเลือกสินค้าอย่างน้อย 1 ถุงนะคะ');return}if(!nm.value||!ph.value){alert('กรุณากรอกชื่อและเบอร์โทรค่ะ');return}
+const v=n=>document.querySelector(`[name=${n}]:checked`).value;
+const s=`🥜 ออเดอร์ถั่วฮงยก\n${l.join('\n')}\nรสชาติ: ${f}\nรวม: ฿${t} (ยังไม่รวมค่าส่ง)\n\nชื่อ: ${nm.value}\nโทร: ${ph.value}\nรับสินค้า: ${v('dl')}${v('dl')=='จัดส่ง'?'\nที่อยู่: '+ad.value:''}\nชำระเงิน: ${v('pay')}${nt.value?'\nหมายเหตุ: '+nt.value:''}`;
+txt.textContent=s;lsh.href='https://line.me/R/share?text='+encodeURIComponent(s);sum.style.display='block';sum.scrollIntoView({behavior:'smooth'})}
+function cp(){const s=txt.textContent;(navigator.clipboard?navigator.clipboard.writeText(s):Promise.reject()).then(()=>alert('คัดลอกแล้ว ✅')).catch(()=>{const a=document.createElement('textarea');a.value=s;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();alert('คัดลอกแล้ว ✅')})}
+</script></body></html>
